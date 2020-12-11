@@ -1,0 +1,17 @@
+form {
+  .form-field {
+    margin: $formFieldsMargin;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .form-errors {
+    p {
+      font-family: monospace;
+      color: $errorColor;
+    }
+  }
+}

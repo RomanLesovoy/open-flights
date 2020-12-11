@@ -1,0 +1,20 @@
+@import "normalize.css";
+@import "vars";
+@import "mixins";
+
+// basic
+@import "content";
+@import "forms";
+
+// components
+@import "components/header";
+@import "components/loader";
+@import "components/datepicker";
+
+// pages
+@import "pages/login";
+@import "pages/dashboard";
+
+* {
+  font-family: fangsong;
+}

@@ -1,0 +1,11 @@
+.content {
+  min-height: 70vh;
+  @include flex;
+
+  .MuiPaper-root {
+    padding: $contentPadding;
+    position: relative;
+    min-width: 50%;
+    min-height: 250px;
+  }
+}

@@ -1,0 +1,5 @@
+.dashboard {
+  .search {
+    @include flex(center, flex-start);
+  }
+}
