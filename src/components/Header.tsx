@@ -1,23 +1,18 @@
 import React, { Fragment } from "react";
+import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { selectUser } from "../redux/reducers";
 import Actions from "../redux/actions";
-import { AppBar, Toolbar, ButtonGroup, Button, FormGroup, FormControlLabel, Switch } from "@material-ui/core";
+import { AppBar, Toolbar, ButtonGroup, Button } from "@material-ui/core";
 
 const Header = () => {
   const dispatch = useDispatch();
   const authenticated = !!useSelector(selectUser);
-  const darkTheme = false;
+
   return (
     <AppBar position="static" color="primary">
       <div className="container toolbar">
         <Toolbar>
-          <FormGroup>
-            <FormControlLabel
-              control={<Switch checked={darkTheme} onChange={() => {}} aria-label="Theme switch" />}
-              label={darkTheme ? 'Dark Theme' : 'Light Theme'}
-            />
-          </FormGroup>
           { authenticated ? (
               <Fragment>
                 <div className="header-block">
@@ -32,11 +27,9 @@ const Header = () => {
                 </div>
               </Fragment>)
             : (<Fragment>
-                <ButtonGroup variant="contained" color="primary">
-                  <Button
-                    className={`${window.location.href === '/login' ? 'active' : ''} header-link`}
-                    onClick={() => {}}>
-                    Login
+                <ButtonGroup variant="contained" color="default">
+                  <Button>
+                    <NavLink to="/login">Login</NavLink>
                   </Button>
                 </ButtonGroup>
               </Fragment>

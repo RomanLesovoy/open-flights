@@ -1,4 +1,7 @@
 .toolbar {
+  a {
+    text-decoration: none;
+  }
   & > div {
     @include flex(center, space-between);
     .header-block {
