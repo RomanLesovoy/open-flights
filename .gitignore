@@ -5,7 +5,6 @@
 /.pnp
 .pnp.js
 .idea/
-public/
 .eslintcache
 
 # testing
